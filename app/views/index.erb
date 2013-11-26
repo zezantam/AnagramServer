@@ -21,3 +21,8 @@
     </tr>
   </table>
 </div>
+
+<p>The anagrams for <%= @word %> are:</p><br>
+<%= @answers.each do |answer| %>
+<li><%= answer %></li>
+<% end %>
