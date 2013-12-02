@@ -1,28 +1,14 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to The Anagram Solver!</h1>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<% if @word %>
+<p>The anagrams for <b><%= @word %></b> are:</p>
+<% end %>
+<% if @answers %>
+<%      @answers.each do |answer| %>
+<li><%= answer %></li>
+<%   end %>
+<% end %>
 </div>
 
-<p>The anagrams for <%= @word %> are:</p><br>
-<%= @answers.each do |answer| %>
-<li><%= answer %></li>
-<% end %>
+<p>Look for more words?</p>
