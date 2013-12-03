@@ -10,3 +10,6 @@ get '/:word' do
 	erb :index
 end
 
+post '/solve' do
+	redirect to("/#{params[:query]}")
+end

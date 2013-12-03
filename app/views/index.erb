@@ -9,6 +9,14 @@
 <li><%= answer %></li>
 <%   end %>
 <% end %>
-</div>
 
-<p>Look for more words?</p>
+<br>
+<br>
+
+<form action="/solve" method="post">
+    Get another set of anagrams:<br>
+    <input type="text" name="query">
+    <input type="submit" value="Anagram me!">
+</form>
+
+</div>
